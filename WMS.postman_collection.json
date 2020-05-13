@@ -1,110 +1,228 @@
 {
-	"id": "d548db58-1d82-5b07-1784-5c65bf45ff6a",
-	"name": "WMS",
-	"description": "",
-	"order": [
-		"e86cc74b-2a4b-c66c-ef63-298da8a38d8f",
-		"e8132242-a9bd-2898-5958-96e315b30086",
-		"eb5e6b00-9bbf-689e-7e8e-3e79f5cf19d2",
-		"c4a2282a-ca16-5adb-abf0-e1df89eb448e"
-	],
-	"folders": [],
-	"folders_order": [],
-	"timestamp": 1570631214493,
-	"owner": 0,
-	"public": false,
-	"requests": [
+	"info": {
+		"_postman_id": "aa7b1c98-ad73-42ca-8f28-b5fa331c0039",
+		"name": "WMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
 		{
-			"id": "c4a2282a-ca16-5adb-abf0-e1df89eb448e",
-			"headers": "",
-			"headerData": [],
-			"url": "http://localhost:8085/api/project/ID03",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"preRequestScript": null,
-			"method": "DELETE",
-			"collectionId": "d548db58-1d82-5b07-1784-5c65bf45ff6a",
-			"data": null,
-			"dataMode": "params",
-			"name": "DeleteProject",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1570900524961,
-			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {}
-		},
-		{
-			"id": "e8132242-a9bd-2898-5958-96e315b30086",
-			"headers": "",
-			"headerData": [],
-			"url": "http://localhost:8085/api/project/all",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"preRequestScript": null,
-			"method": "GET",
-			"collectionId": "d548db58-1d82-5b07-1784-5c65bf45ff6a",
-			"data": null,
-			"dataMode": "params",
-			"name": "Get All Projects",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1570794345103,
-			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {}
-		},
-		{
-			"id": "e86cc74b-2a4b-c66c-ef63-298da8a38d8f",
-			"headers": "",
-			"headerData": [],
-			"url": "",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"preRequestScript": null,
-			"method": "GET",
-			"collectionId": "d548db58-1d82-5b07-1784-5c65bf45ff6a",
-			"data": null,
-			"dataMode": "params",
 			"name": "Create Project",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1570631236708,
-			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {}
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
 		},
 		{
-			"id": "eb5e6b00-9bbf-689e-7e8e-3e79f5cf19d2",
-			"headers": "",
-			"headerData": [],
-			"url": "http://localhost:8085/api/project/id03",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"preRequestScript": null,
-			"method": "GET",
-			"collectionId": "d548db58-1d82-5b07-1784-5c65bf45ff6a",
-			"data": null,
-			"dataMode": "params",
+			"name": "Get All Projects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/project/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"project",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "getProjectById",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1570794356106,
-			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {}
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/project/id03",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"project",
+						"id03"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProject",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/project/Test1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"project",
+						"Test1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Project Task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"summary\":\"Test New\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/backlog/TEST2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"backlog",
+						"TEST2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Project Task by Project Identifier",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/backlog/TEST1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"backlog",
+						"TEST1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Project Task By Project Sequence",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/backlog/TEST1/TEST1-2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"backlog",
+						"TEST1",
+						"TEST1-2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Project Task ",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"projectSequence\": \"TEST1-2\",\r\n    \"summary\": \"Updated Latest\",\r\n    \"acceptanceCriteria\": null,\r\n    \"status\": \"TO_DO\",\r\n    \"priority\": 3,\r\n    \"dueDate\": null,\r\n    \"projectIdentifier\": \"TEST1\",\r\n    \"created\": \"2020-02-02T13:38:32.557+0000\",\r\n    \"updated\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/backlog/TEST1/TEST1-3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"backlog",
+						"TEST1",
+						"TEST1-3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delte Project Task by Project Sequence",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/backlog/TEST1/TEST1-1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"backlog",
+						"TEST1",
+						"TEST1-1"
+					]
+				}
+			},
+			"response": []
 		}
-	]
+	],
+	"protocolProfileBehavior": {}
 }
